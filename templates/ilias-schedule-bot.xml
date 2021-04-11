@@ -28,7 +28,7 @@
   </Environment>
   <Data>
     <Volume>
-      <HostDir>/mnt/user/appdata/iliasschedulebot</HostDir>
+      <HostDir>/mnt/user/appdata/ilias-schedule-bot</HostDir>
       <ContainerDir>/bot/data</ContainerDir>
       <Mode>rw</Mode>
     </Volume>
