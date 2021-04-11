@@ -20,12 +20,6 @@
   <Networking>
     <Mode>bridge</Mode>
   </Networking>
-  <Environment>
-    <Variable>
-      <Name>TIMEZONE</Name>
-      <Value>Europe/Berlin</Value>
-    </Variable>
-  </Environment>
   <Data>
     <Volume>
       <HostDir>/mnt/user/appdata/ilias-schedule-bot</HostDir>
