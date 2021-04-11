@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Containers>
+  <TemplateURL>https://raw.githubusercontent.com/faraway/unraid-templates/master/templates/ilias-schedule-bot.xml</TemplateURL>
+  <Beta>False</Beta>
+  <Category>Network:Messenger Network:Web Downloaders: Productivity:</Category>
+  <Name>Ilias Schedule Bot</Name>
+  <Description>
+    Test
+  </Description>
+  <Overview>
+    Test
+  </Overview>
+  <Support>https://discord.gg/EH2XVvqybJ</Support>
+  <Registry>https://registry.hub.docker.com/r/faraway030/iliasschedulebot/</Registry>
+  <GitHub>https://github.com/faraway030/IliasScheduleBot</GitHub>
+  <Repository>faraway030/iliasschedulebot</Repository>
+  <Project>https://github.com/faraway030/IliasScheduleBot</Project>
+  <BindTime>true</BindTime>
+  <Privileged>false</Privileged>
+  <Networking>
+    <Mode>bridge</Mode>
+  </Networking>
+  <Environment>
+    <Variable>
+      <Name>TIMEZONE</Name>
+      <Value>Europe/Berlin</Value>
+    </Variable>
+  </Environment>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/iliasschedulebot</HostDir>
+      <ContainerDir>/bot/data</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <WebUI></WebUI>
+  <Icon></Icon>
+  <DonateText>If you appreciate my work, then please consider buying me a coffee :D</DonateText>
+  <DonateLink>https://www.buymeacoffee.com/teyifigoda</DonateLink>
+  <DonateImg>https://img.buymeacoffee.com/api/?name=Steven+Bruck&size=300&bg-image=bmc&background=5F7FFF</DonateImg>
+  <ExtraParams></ExtraParams>
+</Containers>
+
+
+
