@@ -1,0 +1,65 @@
+<?xml version="1.0"?>
+<Container version="2">
+    <Name>OctoPrint</Name>
+    <Repository>octoprint/octoprint:latest</Repository>
+    <Registry>https://hub.docker.com/r/octoprint/octoprint</Registry>
+    <Network>bridge</Network>
+    <MyIP/>
+    <Shell>sh</Shell>
+    <Privileged>false</Privileged>
+    <Project>https://octoprint.org/</Project>
+    <Overview>&#xD;
+        OctoPrint provides a snappy web interface for controlling consumer 3D printers.
+    </Overview>
+    <Category>Tools:</Category>
+    <WebUI>http://[IP]:[PORT:5000]</WebUI>
+    <TemplateURL>https://raw.githubusercontent.com/faraway/unraid-templates/master/templates/octoprint.xml</TemplateURL>
+    <Icon>https://octoprint.org/assets/img/logo.png</Icon>
+    <ExtraParams/>
+    <PostArgs/>
+    <CPUset/>
+    <DonateText/>
+    <DonateLink/>
+    <Requires/>
+    <Description>&#xD;
+        OctoPrint provides a snappy web interface for controlling consumer 3D printers.
+    </Description>
+    <Networking>
+        <Mode>bridge</Mode>
+        <Publish>
+            <Port>
+                <HostPort>5002</HostPort>
+                <ContainerPort>5000</ContainerPort>
+                <Protocol>tcp</Protocol>
+            </Port>
+            <Port>
+                <HostPort>5003</HostPort>
+                <ContainerPort>80</ContainerPort>
+                <Protocol>tcp</Protocol>
+            </Port>
+            <Port>
+                <HostPort>5004</HostPort>
+                <ContainerPort>8080</ContainerPort>
+                <Protocol>tcp</Protocol>
+            </Port>
+        </Publish>
+    </Networking>
+    <Data>
+        <Volume>
+            <HostDir>/mnt/user/appdata/octoprint</HostDir>
+            <ContainerDir>/octoprint</ContainerDir>
+            <Mode>rw</Mode>
+        </Volume>
+    </Data>
+    <Labels/>
+    <Config Name="config" Target="/octoprint" Default="/mnt/user/appdata/octoprint" Mode="rw" Description="" Type="Path"
+            Display="always" Required="true" Mask="false">/mnt/user/appdata/octoprint
+    </Config>
+    <Config Name="WebUI" Target="5000" Default="5000" Mode="tcp" Description="" Type="Port" Display="always"
+            Required="true" Mask="false">5002
+    </Config>
+    <Config Name="Printer USB Port" Target="" Default="/dev/ttyACM0" Mode="" Description="" Type="Device"
+            Display="always" Required="true" Mask="false">
+        /dev/serial/by-id/
+    </Config>
+</Container>
